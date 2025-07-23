@@ -1,15 +1,10 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
-import { Alert, Button, Container } from 'react-bootstrap';
+import routes from './routes';
+const router = createBrowserRouter(routes);
 
 function App() {
-  return (
-    <>
-      <Container className="mt-5">
-        <Alert variant="success">React Bootstrap is working!</Alert>
-        <Button variant="primary">Click Me</Button>
-      </Container>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
