@@ -51,13 +51,13 @@ pnpm format
 
 ## 🧾 Scripts
 
-| Script         | Description                       |
-|----------------|-----------------------------------|
-| `pnpm dev`     | Start the local dev server        |
-| `pnpm build`   | Build for production              |
-| `pnpm preview` | Preview production build locally  |
-| `pnpm lint`    | Run ESLint                        |
-| `pnpm format`  | Format code with Prettier         |
+| Script         | Description                      |
+| -------------- | -------------------------------- |
+| `pnpm dev`     | Start the local dev server       |
+| `pnpm build`   | Build for production             |
+| `pnpm preview` | Preview production build locally |
+| `pnpm lint`    | Run ESLint                       |
+| `pnpm format`  | Format code with Prettier        |
 
 ---
 
