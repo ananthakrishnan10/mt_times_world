@@ -30,8 +30,7 @@ export function Login() {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log('Login Success:', data);
+  const onSubmit = () => {
     navigate('/dashboard');
   };
 

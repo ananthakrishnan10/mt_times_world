@@ -1,8 +1,12 @@
-import type { RouteObject } from 'react-router-dom';
+import { Navigate, type RouteObject } from 'react-router-dom';
 import { DashboardLayout, AuthLayout } from './layouts';
 import { Home, Login, Register } from './pages';
 
 const routes: RouteObject[] = [
+  {
+    path: '/',
+    element: <Navigate to="/auth/login" replace />,
+  },
   {
     path: '/dashboard',
     element: <DashboardLayout />,
