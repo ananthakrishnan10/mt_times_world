@@ -4,7 +4,7 @@ import { Home, Login, Register } from './pages';
 
 const routes: RouteObject[] = [
   {
-    path: '/',
+    path: '/dashboard',
     element: <DashboardLayout />,
     children: [
       {
