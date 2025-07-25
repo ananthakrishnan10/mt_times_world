@@ -8,7 +8,7 @@ export function AuthLayout() {
       fluid
       className={`d-flex align-items-center justify-content-center ${styles.authContainer}`}
     >
-      <Row className={`w-100 ${styles.maxWidth1024}`}>
+      <Row className={`w-100 ${styles.maxWidthContainer}`}>
         {/* Left Panel */}
         <Col
           xs={12}
