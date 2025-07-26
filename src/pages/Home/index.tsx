@@ -11,7 +11,7 @@ import {
   Container,
 } from 'react-bootstrap';
 import { useGetCountriesQuery } from '../../store/services/countries';
-import SectionHeader from '../../components/SectionHeader';
+import { Slider, SectionHeader } from '../../components';
 
 const REGIONS = ['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
 
@@ -20,7 +20,11 @@ export function Home() {
   const [visible, setVisible] = useState(8);
   const [showMenu, setShowMenu] = useState(false);
 
-  const { data: countries, isLoading } = useGetCountriesQuery(region);
+  const {
+    data: countries,
+    isLoading,
+    isFetching,
+  } = useGetCountriesQuery(region);
 
   const filtered = countries?.slice(0, visible) || [];
 
@@ -84,12 +88,31 @@ export function Home() {
       </Offcanvas>
       <SectionHeader title="WELCOME" />
 
-      {isLoading ? (
+      {isLoading || isFetching ? (
         <div className="text-center py-5">
           <Spinner animation="border" />
         </div>
       ) : (
         <>
+          <div className="pt-2 pb-5">
+            <Slider
+              items={(countries || []).slice(0, 8).map((country) => ({
+                id: country.name,
+                content: (
+                  <div className="text-center rounded shadow-sm">
+                    <img
+                      src={country.flag}
+                      alt={country.name}
+                      className="img-fluid w-100"
+                      style={{ objectFit: 'cover', height: 200 }}
+                    />
+                  </div>
+                ),
+              }))}
+            />
+          </div>
+
+          {/* Country list cards */}
           <Row>
             {filtered.map((country) => (
               <Col md={6} key={country.name} className="mb-3">
@@ -112,6 +135,7 @@ export function Home() {
             ))}
           </Row>
 
+          {/* Load more button */}
           {visible < (countries?.length || 0) && (
             <div className="text-center mt-3">
               <Button onClick={() => setVisible((v) => v + 8)}>

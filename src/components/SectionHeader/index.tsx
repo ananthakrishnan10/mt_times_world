@@ -6,7 +6,7 @@ interface SectionHeaderProps {
   title: string;
 }
 
-const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
+export const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
   return (
     <Container
       className={`${styles.sectionHeader} d-flex flex-column flex-md-row gap-2 align-items-center my-4`}
@@ -17,5 +17,3 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({ title }) => {
     </Container>
   );
 };
-
-export default SectionHeader;

@@ -1,0 +1,21 @@
+.sliderWrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.emblaContainer {
+  display: flex;
+}
+
+.emblaSlide {
+  flex: 0 0 100%;
+  padding: 1rem;
+
+  @media (min-width: 768px) {
+    flex: 0 0 50%;
+  }
+
+  @media (min-width: 992px) {
+    flex: 0 0 33.3333%;
+  }
+}
