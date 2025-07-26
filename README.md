@@ -4,7 +4,7 @@ A modern web application built with **React**, **Vite**, and **pnpm**, styled us
 
 ---
 
-## 🚀 Getting Started
+## ✨ Getting Started
 
 ### 1. Clone the repository
 
@@ -21,7 +21,7 @@ pnpm install
 
 ---
 
-## 🧪 Development
+## 🔪 Development
 
 Start the development server:
 
@@ -49,7 +49,7 @@ pnpm format
 
 ---
 
-## 🧾 Scripts
+## 📜 Scripts
 
 | Script         | Description                      |
 | -------------- | -------------------------------- |
@@ -61,14 +61,14 @@ pnpm format
 
 ---
 
-## 🛠️ Tech Stack
+## 💠 Tech Stack
 
 - ⚛️ React
 - ⚡ Vite
 - 🎨 React Bootstrap
-- 📦 pnpm
+- 🛆 pnpm
 - 🧹 ESLint
-- 🎯 Prettier
+- 🌟 Prettier
 
 ---
 
@@ -80,32 +80,14 @@ mt_times_world/
 ├── src/
 │   ├── assets/
 │   ├── components/
+│   ├── layouts/
 │   ├── pages/
-│   ├── App.jsx
-│   └── main.jsx
-├── .eslintrc.js
-├── .prettierrc
+│   ├── store/
+│   ├── App.tsx
+│   └── main.tsx
 ├── index.html
 ├── package.json
 └── README.md
-```
-
----
-
-## ✅ VSCode Recommended Settings
-
-Make sure you have **Prettier** and **ESLint** extensions installed.
-
-`.vscode/settings.json`:
-
-```json
-{
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
-}
 ```
 
 ---
