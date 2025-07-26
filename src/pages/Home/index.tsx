@@ -10,8 +10,9 @@ import {
   Navbar,
   Container,
 } from 'react-bootstrap';
+
 import { useGetCountriesQuery } from '../../store/services/countries';
-import { Slider, SectionHeader } from '../../components';
+import { SectionHeader, Slider } from '../../components';
 
 const REGIONS = ['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
 

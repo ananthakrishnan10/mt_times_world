@@ -15,7 +15,8 @@ export default defineConfig([
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: { jsx: true },
-        project: './tsconfig.json',
+        project: './tsconfig.eslint.json',
+        // eslint-disable-next-line no-undef
         tsconfigRootDir: process.cwd(),
       },
       globals: globals.browser,
@@ -53,7 +54,7 @@ export default defineConfig([
     settings: {
       'import/resolver': {
         typescript: {
-          project: './tsconfig.json',
+          project: './tsconfig.eslint.json',
         },
       },
     },
